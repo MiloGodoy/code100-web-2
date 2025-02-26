@@ -1,0 +1,100 @@
+"use client"
+
+import Image from "next/image"
+import { ArrowRight } from "lucide-react"
+
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Card, CardContent } from "@/components/ui/card"
+import Code100Logo from '../../public/code100_logo.png'
+import GrupoBepaLogo from '../../public/grupoBepa.png'
+
+export default function AboutUs() {
+  return (
+    <section className="py-16 md:py-24">
+      <div className="container px-4">
+        {/* Main Content */}
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
+          {/* Logo Column */}
+          <div className="flex justify-center md:justify-end">
+            <Image
+              src={ Code100Logo }
+              alt="Code100 Logo"
+              width={400}
+              height={120}
+              className="w-auto h-auto"
+              priority
+            />
+          </div>
+
+          {/* Text Content Column */}
+          <div className="space-y-6">
+            <h1 className="text-4xl md:text-5xl font-bold">
+              <span className="text-amber-400">Quienes </span>
+              <span className="text-green-500">somos</span>
+            </h1>
+
+            <div className="space-y-4 text-gray-600">
+              <p>
+                Desde el año 2015, nos hemos destacado como <span className="font-semibold text-gray-900">líderes</span>{" "}
+                en el mercado paraguayo como Prestadores de Servicios de Certificación de Firma Electrónica, siendo
+                debidamente aprobados por el{" "}
+                <span className="font-semibold text-gray-900">Ministerio de Industria y Comercio</span>.
+              </p>
+
+              <p>
+                Durante estos años, hemos desempeñado un papel fundamental en la transformación digital en Paraguay,
+                ofreciendo servicios especializados de Certificación, reconocimiento e identificación electrónica.
+              </p>
+
+              <p>
+                Nuestro compromiso se refleja en la constante adaptación a las exigencias del entorno digital,{" "}
+                <span className="font-semibold text-gray-900">
+                  garantizando la seguridad, validez legal y confiabilidad
+                </span>{" "}
+                de cada Certificado Cualificado de Firma Electrónica que expedimos.
+              </p>
+
+              <p>
+                Participamos activamente en el desarrollo de soluciones innovadoras que impulsan{" "}
+                <span className="font-semibold text-gray-900">
+                  la eficiencia y la seguridad en los procesos electrónicos
+                </span>
+                , contribuyendo así al avance continuo de la infraestructura digital en el país.
+              </p>
+            </div>
+
+            <Button className="bg-orange-500 hover:bg-orange-600">
+              CONOCÉ CODE100 <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+
+        {/* Group Association */}
+        <div className="flex justify-center items-center gap-4 mb-24">
+          <span className="text-2xl font-light italic">Somos parte del</span>
+          <Image src={ GrupoBepaLogo } alt="Grupo BEPA S.A." width={200} height={60} className="w-auto h-12" />
+        </div>
+
+        {/* Newsletter Subscription */}
+        <div className="max-w-2xl mx-auto text-center">
+          <Card className="bg-gray-50">
+            <CardContent className="p-6">
+              <p className="text-gray-600 mb-6">Inscribite para recibir todas las novedades y noticias sobre Code100</p>
+              <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <div className="flex-1 grid grid-cols-2 gap-4">
+                  <Input type="text" placeholder="Nombre" className="bg-white" />
+                  <Input type="email" placeholder="Correo Electrónico" className="bg-white" />
+                </div>
+                <Button type="submit" className="bg-orange-500 hover:bg-orange-600 whitespace-nowrap">
+                  Inscribirse
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  )
+}
+
