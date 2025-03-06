@@ -5,6 +5,9 @@ import MissionVisionValues from "@/components/MisionVisionValues"
 import DigitalSolutions from "@/components/DigitalSolutions"
 import Certifications from "@/components/Certifications"
 import GrowthTimeline from "@/components/Growth-Higline"
+import WhyChooseUs from "@/components/WhyChooseUs"
+import EnvironmentalCommitment from "@/components/Enviromental"
+import Footer from "@/components/Footer"
 
 export default function AboutUsPage() {
   return (
@@ -60,6 +63,9 @@ export default function AboutUsPage() {
         <DigitalSolutions />
         <Certifications />
         <GrowthTimeline />
+        <WhyChooseUs />
+        <EnvironmentalCommitment />
+        <Footer />
         </main>
     </>
   )
