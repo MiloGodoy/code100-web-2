@@ -165,7 +165,7 @@ export default function Header() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link
-                href="/certificados"
+                href="/repositorio-documentos"
                 className="text-foreground/60 transition-colors hover:text-foreground flex items-center gap-0.5"
               >
                 Repositorio
@@ -174,7 +174,7 @@ export default function Header() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link
-                href="/certificados"
+                href="/blog"
                 className="text-foreground/60 transition-colors hover:text-foreground flex items-center gap-0.5"
               >
                 Blog
@@ -183,7 +183,7 @@ export default function Header() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link
-                href="/certificados"
+                href="/contacto"
                 className="text-foreground/60 transition-colors hover:text-foreground flex items-center gap-0.5"
               >
                 Contacto
@@ -192,7 +192,7 @@ export default function Header() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link
-                href="/certificados"
+                href="/fundacion"
                 className="text-foreground/60 transition-colors hover:text-foreground flex items-center gap-0.5"
               >
                 Fundación Code100
