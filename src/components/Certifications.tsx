@@ -1,8 +1,17 @@
+'use client'
+
 import { LockIcon as LockCheckIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import { useRouter } from "next/navigation"
 
 export default function Certifications() {
+
+  const router = useRouter()
+  const handleClick = () => {
+    router.push('https://drive.google.com/file/d/1Lv3PuOONEBNOhaTHDPx-WF8Mzw3sMknA/view?usp=share_link')
+  }
+
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
@@ -13,7 +22,7 @@ export default function Certifications() {
             La Resolución 187/15 del Ministerio de Industria y Comercio dispone la habilitación de CODE100 S.A. como
             Prestador de Servicios de Certificación de la Infraestructura de Clave Pública del Paraguay.
           </p>
-          <Button variant="default" className="bg-amber-400 hover:bg-amber-500 text-black font-semibold">
+          <Button variant="default" className="bg-amber-400 hover:bg-amber-500 text-black font-semibold" onClick={handleClick}>
             VER HABILITACIÓN
           </Button>
         </div>
