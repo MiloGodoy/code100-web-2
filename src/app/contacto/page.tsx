@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card } from "@/components/ui/card"
 import Image from "next/image"
+import { toast } from "sonner"
 import LogoBepa from "../../../public/grupoBepa.png"
 import LogoCode100 from "../../../public/code100_logo.png"
 import DigitalLifeLogo from "../../../public/DigitalLife-Logo.png"
@@ -37,6 +38,7 @@ const locations = [
 ]
 
 export default function ContactPage() {
+  const [isLoading, setIsLoading] = useState(false)
   const [formData, setFormData] = useState({
     nombre: "",
     apellido: "",
@@ -46,9 +48,43 @@ export default function ContactPage() {
     mensaje: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log(formData)
+    setIsLoading(true)
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          subject: "Nuevo Mensaje de Contacto - Code100",
+          ...formData,
+        }),
+      })
+
+      if (response.ok) {
+        toast.success("Su mensaje fue enviado con éxito, nos comunicaremos con usted en la brevedad posible.", {
+          duration: 5000,
+        })
+        // Limpiar formulario
+        setFormData({
+          nombre: "",
+          apellido: "",
+          empresa: "",
+          correo: "",
+          telefono: "",
+          mensaje: "",
+        })
+      } else {
+        throw new Error("Error al enviar el formulario")
+      }
+    } catch (error) {
+      toast.error("Hubo un error al enviar su mensaje. Por favor, intente nuevamente.")
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
@@ -68,28 +104,33 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
                     <Input
                       placeholder="Nombre*"
+                      required
                       value={formData.nombre}
                       onChange={(e) => setFormData({ ...formData, nombre: e.target.value })}
                     />
                     <Input
                       placeholder="Apellido*"
+                      required
                       value={formData.apellido}
                       onChange={(e) => setFormData({ ...formData, apellido: e.target.value })}
                     />
                   </div>
                   <Input
                     placeholder="Nombre de la Empresa*"
+                    required
                     value={formData.empresa}
                     onChange={(e) => setFormData({ ...formData, empresa: e.target.value })}
                   />
                   <Input
                     placeholder="Correo Electrónico*"
                     type="email"
+                    required
                     value={formData.correo}
                     onChange={(e) => setFormData({ ...formData, correo: e.target.value })}
                   />
                   <Input
                     placeholder="Teléfono / Celular*"
+                    required
                     value={formData.telefono}
                     onChange={(e) => setFormData({ ...formData, telefono: e.target.value })}
                   />
@@ -99,8 +140,12 @@ export default function ContactPage() {
                     onChange={(e) => setFormData({ ...formData, mensaje: e.target.value })}
                     className="min-h-[120px] md:min-h-[150px]"
                   />
-                  <Button type="submit" className="w-full bg-amber-400 hover:bg-amber-500 text-black">
-                    Enviar
+                  <Button
+                    type="submit"
+                    className="w-full bg-amber-400 hover:bg-amber-500 text-black"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? "Enviando..." : "Enviar"}
                   </Button>
                 </form>
               </div>
