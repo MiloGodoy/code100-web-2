@@ -1,10 +1,17 @@
+'use client'
+
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import Office from '../../public/office.jpeg'
+import { useRouter } from "next/navigation"
+import Link from "next/link"
 
 export default function ProductHero() {
+
+  const router = useRouter();
+
   const certificateTypes = [
     {
       type: "F1",
@@ -43,8 +50,10 @@ export default function ProductHero() {
                 Con tu firma electrónica, tenes garantizada la autenticidad, integridad y validez jurídica de tus
                 documentos firmados, estés donde estés
               </p>
-              <Button className="bg-amber-400 hover:bg-amber-500 text-black">
-                SOLICITAR <ArrowRight className="ml-2 h-4 w-4" />
+              <Button className="bg-amber-400 hover:bg-amber-500 text-black" asChild>
+                <Link href='/solicitar-productos'>
+                  SOLICITAR <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
             </div>
 

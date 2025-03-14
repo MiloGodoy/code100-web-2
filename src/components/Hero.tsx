@@ -21,7 +21,7 @@ const slides = [
       "Optimiza documentos laborales con firma electrónica líder en Paraguay. Agiliza y garantiza validez legal. Transforma tu gestión eficientemente con innovación.",
     primaryButton: {
       text: "SOLICITE AHORA",
-      href: "/solicitar",
+      href: "/solicitar-productos",
     },
     secondaryButton: {
       text: "MÁS INFO",
@@ -36,7 +36,7 @@ const slides = [
       "Descubre cómo este certificado puede simplificar y agilizar tus procesos de firma electrónica, asegurando la confidencialidad, seguridad y validez de tus documentos.",
     primaryButton: {
       text: "CONOCER MÁS",
-      href: "/conocer-mas",
+      href: "/certificado-cualificado",
     },
   },
   {

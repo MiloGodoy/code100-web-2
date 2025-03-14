@@ -10,7 +10,7 @@ export async function POST(req: Request) {
 
     const { data, error } = await resend.emails.send({
       from: 'Formulario Code100 <onboarding@resend.dev>',
-      to: ['milogodoy@hotmail.com'],
+      to: ['milogodoy@gmail.com'],
       subject: 'Nueva Solicitud de Producto - Code100',
       html: `
         <h2>Nueva Solicitud de Producto</h2>
