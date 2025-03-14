@@ -80,8 +80,8 @@ export default function ContactPage() {
       } else {
         throw new Error("Error al enviar el formulario")
       }
-    } catch (error) {
-      toast.error("Hubo un error al enviar su mensaje. Por favor, intente nuevamente.")
+    } catch {
+      toast("Hubo un error al enviar su mensaje. Por favor, intente nuevamente.")
     } finally {
       setIsLoading(false)
     }

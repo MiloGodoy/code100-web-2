@@ -5,12 +5,10 @@ import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import Office from '../../public/office.jpeg'
-import { useRouter } from "next/navigation"
 import Link from "next/link"
 
 export default function ProductHero() {
 
-  const router = useRouter();
 
   const certificateTypes = [
     {

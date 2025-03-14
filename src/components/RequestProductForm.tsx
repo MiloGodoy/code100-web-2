@@ -62,8 +62,8 @@ export default function RequestProductsForm() {
       } else {
         throw new Error("Error al enviar el formulario")
       }
-    } catch (error) {
-      toast.error("Hubo un error al enviar su solicitud. Por favor, intente nuevamente.")
+    } catch {
+      toast("Hubo un error al enviar su solicitud. Por favor, intente nuevamente.")
     } finally {
       setIsLoading(false)
     }

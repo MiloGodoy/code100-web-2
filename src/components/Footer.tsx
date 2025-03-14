@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Facebook, Instagram, Youtube, Linkedin, Phone, Mail, MapPin } from "lucide-react"
 import Code100Logo from "../../public/code100_logo.png"
-import FundacionLogo from "../../public/FundacionLogo.png"
+
 
 export default function Footer() {
   return (
