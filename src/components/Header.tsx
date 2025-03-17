@@ -151,7 +151,7 @@ export default function Header() {
                 className="text-foreground/60 transition-colors hover:text-foreground flex items-center gap-0.5"
               >
                 Certificados
-                <ChevronDown className="h-3 w-3" />
+                
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -160,7 +160,7 @@ export default function Header() {
                 className="text-foreground/60 transition-colors hover:text-foreground flex items-center gap-0.5"
               >
                 Soporte
-                <ChevronDown className="h-3 w-3" />
+                
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -169,7 +169,7 @@ export default function Header() {
                 className="text-foreground/60 transition-colors hover:text-foreground flex items-center gap-0.5"
               >
                 Repositorio
-                <ChevronDown className="h-3 w-3" />
+        
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -178,7 +178,7 @@ export default function Header() {
                 className="text-foreground/60 transition-colors hover:text-foreground flex items-center gap-0.5"
               >
                 Blog
-                <ChevronDown className="h-3 w-3" />
+                
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -187,7 +187,7 @@ export default function Header() {
                 className="text-foreground/60 transition-colors hover:text-foreground flex items-center gap-0.5"
               >
                 Contacto
-                <ChevronDown className="h-3 w-3" />
+                
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -196,7 +196,7 @@ export default function Header() {
                 className="text-foreground/60 transition-colors hover:text-foreground flex items-center gap-0.5"
               >
                 Fundación Code100
-                <ChevronDown className="h-3 w-3" />
+                
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>

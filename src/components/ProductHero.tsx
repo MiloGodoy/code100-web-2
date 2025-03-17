@@ -6,9 +6,11 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import Office from '../../public/office.jpeg'
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 
 export default function ProductHero() {
 
+  const router = useRouter();
 
   const certificateTypes = [
     {
@@ -34,6 +36,10 @@ export default function ProductHero() {
       hasButton: true,
     },
   ]
+
+  const handleClick = () => {
+    router.push('certificado-cualificado')
+  }
 
   return (
     <>
@@ -94,7 +100,7 @@ export default function ProductHero() {
                 </div>
                 <h3 className="font-bold mb-4 lg:text-xl">{cert.title}</h3>
                 <p className="text-gray-600 mb-6">{cert.description}</p>
-                {cert.hasButton && <Button className="bg-amber-400 hover:bg-amber-500 text-black">Conocer más</Button>}
+                {cert.hasButton && <Button className="bg-amber-400 hover:bg-amber-500 text-black" onClick={handleClick}>Conocer más</Button>}
               </Card>
             ))}
           </div>
