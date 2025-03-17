@@ -72,7 +72,7 @@ export const RepositorySection = () => {
                       Aquí puedes consultar la validez del certificado con el número de documento de identidad o RUC.
                     </p>
                     <Link
-                      href="/consultar"
+                      href="/consultar-certificados"
                       className="inline-flex items-center px-4 py-2 bg-yellow-400 rounded-full text-sm font-semibold hover:bg-yellow-500 transition-colors"
                     >
                       CONSULTAR

@@ -1,10 +1,16 @@
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      Certificados, en construcción
-    </div>
+    <>
+      <Header />
+      <div className='align-items-center text-center font-bold'>
+        Certificados, en construcción
+      </div>
+      <Footer />
+    </>
   )
 }
 
