@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, ChevronDown, FileCheck, FileSpreadsheet, FileText, Files, FilePen } from "lucide-react"
+import { Menu, FileCheck, FileSpreadsheet, FileText, Files, FilePen } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
