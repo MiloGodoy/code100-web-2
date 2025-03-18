@@ -3,7 +3,6 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import WomenImage from '../../public/mujer2.jpeg'
-import { Sign } from "crypto"
 
 export default function Futura100Hero() {
   return (
