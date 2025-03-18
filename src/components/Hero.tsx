@@ -25,7 +25,7 @@ const slides = [
     },
     secondaryButton: {
       text: "MÁS INFO",
-      href: "/info-documentos",
+      href: "/facturacion-electronica",
     },
   },
   {
@@ -107,7 +107,7 @@ export default function Hero() {
                             asChild
                             variant="outline"
                             size="lg"
-                            className="border-white text-white hover:bg-white hover:text-black"
+                            className="border-white text-gray-600 hover:bg-white hover:text-black"
                           >
                             <Link href={slide.secondaryButton.href}>{slide.secondaryButton.text}</Link>
                           </Button>
