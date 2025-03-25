@@ -1,6 +1,7 @@
 import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import Link from "next/link"
 
 export default function RequirementsCards() {
   return (
@@ -117,7 +118,9 @@ export default function RequirementsCards() {
 
         {/* Button */}
         <div className="text-center">
-          <Button className="bg-amber-400 hover:bg-amber-500 text-black px-8">SOLICITAR</Button>
+          <Button className="bg-amber-400 hover:bg-amber-500 text-black px-8">
+            <Link href='/contacto'>SOLICITAR</Link> 
+          </Button>
         </div>
       </div>
     </section>

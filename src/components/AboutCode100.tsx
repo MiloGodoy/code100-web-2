@@ -1,4 +1,4 @@
-import { ExternalLink, Download } from "lucide-react"
+import { ExternalLink, Download, ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 
@@ -77,6 +77,15 @@ export default function AboutCode100() {
               <p className="text-gray-600 mb-4">
                 Los prestadores de servicio de soporte a CODE100 para las infraestructuras y desarrollo de sistemas.
               </p>
+                <Button className='bg-amber-400 hover:bg-amber-500 text-black' asChild>
+                  <a
+                    href="/prestadores-de-servicios"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Consultar <ArrowRight />
+                  </a>
+                </Button>
             </Card>
 
             {/* Audits */}

@@ -1,6 +1,7 @@
-import { Download, ExternalLink } from "lucide-react"
+import { Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import RefundPolicyDialog from './RefoundPolicyDialog';
 
 export default function DocumentationSection() {
   return (
@@ -18,9 +19,16 @@ export default function DocumentationSection() {
                 de forma automática.
               </p>
               <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full">
-                Descargar
-                <Download className="ml-2 h-4 w-4" />
-              </Button>
+                  <a 
+                    href="https://drive.google.com/file/d/1yfoD9-lyRatoM5vmZyWxj7hvj5bTV1sW/view?usp=sharing" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-full" // Asegura que el enlace ocupe todo el botón
+                  >
+                    Descargar
+                    <Download className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
             </Card>
 
             {/* After Jan 30 */}
@@ -31,10 +39,18 @@ export default function DocumentationSection() {
                 Certificado en el cual se consultan los certificados que fueron revocados y es actualizado a cada hora
                 de forma automática.
               </p>
+              
               <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full">
-                Descargar
-                <Download className="ml-2 h-4 w-4" />
-              </Button>
+                  <a 
+                    href="https://drive.google.com/file/d/1gRzLRQc_dGtHiPC4WgycjzGIG21SROA7/view?usp=sharing" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-full" // Asegura que el enlace ocupe todo el botón
+                  >
+                    Descargar
+                    <Download className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
             </Card>
           </div>
 
@@ -105,10 +121,7 @@ export default function DocumentationSection() {
                 <p className="text-gray-600 text-sm mb-6">
                   Política y condiciones de reembolso aplicadas a los certificados emitidos por CODE100.
                 </p>
-                <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full">
-                  Consultar
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
+                <RefundPolicyDialog />
               </Card>
             </div>
           </div>

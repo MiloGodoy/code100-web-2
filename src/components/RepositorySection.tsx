@@ -29,7 +29,7 @@ export const RepositorySection = () => {
                   el trámite para la emisión del Certificado de Firma Electrónica.
                 </p>
                 <Link
-                  href="/solicitar"
+                  href="/solicitar-certificado"
                   className="inline-flex items-center px-4 py-2 bg-white rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors"
                 >
                   SOLICITAR

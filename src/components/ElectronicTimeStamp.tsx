@@ -1,6 +1,7 @@
 import { Download, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import Link from "next/link"
 
 export default function ElectronicTimestamp() {
   return (
@@ -14,8 +15,10 @@ export default function ElectronicTimestamp() {
               Leyes, decretos, reglamentos y resoluciones que rigen la actividad de la ICPP.
             </p>
             <Button className="bg-amber-400 hover:bg-amber-500 text-black">
-              Consultar
-              <ExternalLink className="ml-2 h-4 w-4" />
+              <Link href='/icp-paraguay'>
+                Consultar
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
           </Card>
 

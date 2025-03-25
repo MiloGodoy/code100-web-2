@@ -85,7 +85,7 @@ export default function Header() {
               <nav className="flex flex-col space-y-4 mt-8">
                 <Link href="/nosotros" className="text-foreground/60 transition-colors hover:text-foreground" onClick={() => setIsOpen(false)} > Nosotros </Link>
                 <Link href="/productos" className="text-foreground/60 transition-colors hover:text-foreground" onClick={() => setIsOpen(false)} > Productos </Link>
-                <Link href="/certificados" className="text-foreground/60 transition-colors hover:text-foreground" onClick={() => setIsOpen(false)} > Certificados </Link> 
+                {/* <Link href="/certificados" className="text-foreground/60 transition-colors hover:text-foreground" onClick={() => setIsOpen(false)} > Certificados </Link>  */}
                 <Link href="/soporte" className="text-foreground/60 transition-colors hover:text-foreground" onClick={() => setIsOpen(false)} > Soporte </Link>
                 <Link href="/repositorio" className="text-foreground/60 transition-colors hover:text-foreground" onClick={() => setIsOpen(false)} > Repositorio Público </Link> 
                 <Link href="/blog" className="text-foreground/60 transition-colors hover:text-foreground" onClick={() => setIsOpen(false)} > Blog </Link> 
@@ -145,7 +145,7 @@ export default function Header() {
             </NavigationMenuItem>
 
             {/* Other navigation items remain the same */}
-            <NavigationMenuItem>
+            {/* <NavigationMenuItem>
               <Link
                 href="/certificados"
                 className="text-foreground/60 transition-colors hover:text-foreground flex items-center gap-0.5"
@@ -153,7 +153,7 @@ export default function Header() {
                 Certificados
                 
               </Link>
-            </NavigationMenuItem>
+            </NavigationMenuItem> */}
             <NavigationMenuItem>
               <Link
                 href="/soporte"
@@ -172,7 +172,7 @@ export default function Header() {
         
               </Link>
             </NavigationMenuItem>
-            <NavigationMenuItem>
+            {/* <NavigationMenuItem>
               <Link
                 href="/blog"
                 className="text-foreground/60 transition-colors hover:text-foreground flex items-center gap-0.5"
@@ -180,7 +180,7 @@ export default function Header() {
                 Blog
                 
               </Link>
-            </NavigationMenuItem>
+            </NavigationMenuItem> */}
             <NavigationMenuItem>
               <Link
                 href="/contacto"
