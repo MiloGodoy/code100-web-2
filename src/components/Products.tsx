@@ -9,6 +9,7 @@ import logoTalento from '../../public/talento100.png'
 import logoFutura from '../../public/futura100.png'
 import logoDataFlow from '../../public/logoDataFlow.png'
 import logoCodeSign from '../../public/logoCodeSign.png'
+import Link from "next/link"
 
 export default function Products() {
   return (
@@ -24,13 +25,15 @@ export default function Products() {
         <CardContent className="p-8 flex flex-col md:flex-row items-center gap-8">
           <div className="flex-1 space-y-4">
             <h2 className="text-2xl md:text-3xl font-bold">Firmar documentos ahora es mucho más fácil</h2>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-lg pb-5">
               Certificado Cualificado de Firma Electrónica, seguridad, validez legal, autenticidad, confiabilidad, y
               privacidad
             </p>
-            <Button className="bg-orange-500 hover:bg-orange-600">
-              QUIERO SABER MÁS <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href="/productos">
+              <Button className="bg-orange-500 hover:bg-orange-600">
+                QUIERO SABER MÁS <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
           <div className="flex-1 flex justify-center">
             <Image src={ logo2 } alt="Code100" width={300} height={100} className="object-contain" />
@@ -43,12 +46,14 @@ export default function Products() {
         {/* Talento100 */}
         <Card className="bg-white">
           <CardContent className="p-6 space-y-4">
-            <h3 className="text-xl font-bold">
+            <h3 className="text-xl font-bold p-5">
               Software de Gestión de Firma de Recibos Electrónicos de Salario Nº 1 en Paraguay.
             </h3>
-            <Button className="bg-orange-500 hover:bg-orange-600">
-              QUIERO SABER MÁS <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href='/talento100-page'>
+              <Button className="bg-orange-500 hover:bg-orange-600">
+                QUIERO SABER MÁS <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </CardContent>
           <CardFooter className="p-6 pt-0">
             <div className="h-24 md:h-32 lg:h-40 relative mb-6">
@@ -60,10 +65,12 @@ export default function Products() {
         {/* Futura100 */}
         <Card className="bg-white">
           <CardContent className="p-6 space-y-4">
-            <h3 className="text-xl font-bold">La solución de Facturación Electrónica más completa del Paraguay.</h3>
-            <Button className="bg-orange-500 hover:bg-orange-600">
-              QUIERO SABER MÁS <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <h3 className="text-xl font-bold p-5">La solución de Facturación Electrónica más completa del Paraguay.</h3>
+            <Link href='/facturacion-electronica'>
+              <Button className="bg-orange-500 hover:bg-orange-600">
+                QUIERO SABER MÁS <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </CardContent>
           <CardFooter className="p-6 pt-0">
             <Image src={ logoFutura } alt="Futura100" width={200} height={60} className="object-contain" />
@@ -74,12 +81,14 @@ export default function Products() {
         <Card className="bg-white">
           <CardContent className="p-6 space-y-4">
             <h3 className="text-xl font-bold">Gestor de Firmas inteligente</h3>
-            <p className="text-gray-600">
+            <p className="text-gray-600 pb-5">
               que permite recolectar y administrar la trazabilidad de documentos digitales.
             </p>
-            <Button className="bg-orange-500 hover:bg-orange-600">
-              QUIERO SABER MÁS <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href='https://dataflow.com.py/'>
+              <Button className="bg-orange-500 hover:bg-orange-600">
+                QUIERO SABER MÁS <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </CardContent>
           <CardFooter className="p-6 pt-0">
             <Image src={ logoDataFlow } alt="DataFlow" width={200} height={60} className="object-contain" />
@@ -90,10 +99,12 @@ export default function Products() {
         <Card className="bg-white">
           <CardContent className="p-6 space-y-4">
             <h3 className="text-xl font-bold">Software Firmador Masivo</h3>
-            <p className="text-gray-600">que permite firmar múltiples documentos en segundos inclusive licitaciones.</p>
-            <Button className="bg-orange-500 hover:bg-orange-600">
-              QUIERO SABER MÁS <ArrowRight className="ml-2 h-4 w-4" />
+            <p className="text-gray-600 pb-5">que permite firmar múltiples documentos en segundos inclusive licitaciones.</p>
+            <Link href='/codesign'>
+              <Button className="bg-orange-500 hover:bg-orange-600">
+                QUIERO SABER MÁS <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
+            </Link>
           </CardContent>
           <CardFooter className="p-6 pt-0">
             <Image src={ logoCodeSign } alt="CodeSign" width={200} height={60} className="object-contain" />
