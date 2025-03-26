@@ -54,7 +54,7 @@ export default function AboutUs() {
                 de cada Certificado Cualificado de Firma Electrónica que expedimos.
               </p>
 
-              <p>
+              <p className="pb-5">
                 Participamos activamente en el desarrollo de soluciones innovadoras que impulsan{" "}
                 <span className="font-semibold text-gray-900">
                   la eficiencia y la seguridad en los procesos electrónicos
