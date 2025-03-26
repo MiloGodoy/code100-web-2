@@ -22,7 +22,7 @@ export default function DigitalSolutions() {
               </h3>
             </div>
             <div className="text-right">
-              <p className="text-xl md:text-2xl text-white leading-relaxed">
+              <p className="text-xl md:text-2xl text-white leading-relaxed text-justify">
                 Hace más de 7 años trabajamos en la validación y verificación de la identidad de las personas y
                 resguardamos la documentación probatoria de las mismas.
               </p>

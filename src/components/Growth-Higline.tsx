@@ -93,7 +93,7 @@ export default function GrowthTimeline() {
                   </div>
                 </div>
                 <h3 className="font-bold mt-2">{event.title}</h3>
-                {event.description && <p className="text-sm text-gray-600 mt-1">{event.description}</p>}
+                {event.description && <p className="text-sm text-gray-600 mt-1 text-justify">{event.description}</p>}
                 {event.bullets && (
                   <ul className="text-sm text-gray-600 list-disc list-inside mt-1">
                     {event.bullets.map((bullet, i) => (

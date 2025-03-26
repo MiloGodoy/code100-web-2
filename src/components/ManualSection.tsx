@@ -37,7 +37,7 @@ export default function ManualSection() {
           {/* Header */}
           <div className="mb-12">
             <h2 className="text-3xl font-bold mb-6">Manuales CODE100</h2>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-lg text-justify">
               En nuestra completa sección «Manuales code100», encontrarás manuales de configuración diseñados para que
               puedas firmar digitalmente con total facilidad y seguridad. Estas detalladas guías te proporcionarán paso
               a paso las instrucciones necesarias para garantizar un uso correcto y eficiente de tu firma digital,

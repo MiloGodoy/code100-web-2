@@ -24,7 +24,7 @@ export default function Products() {
         <div className="p-8 flex flex-col md:flex-row items-center gap-8">
           <div className="flex-1 space-y-4">
             <h2 className="text-2xl md:text-3xl font-bold">Firmar documentos ahora es mucho más fácil</h2>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-lg text-justify">
               Certificado Cualificado de Firma Electrónica, seguridad, validez legal, autenticidad, confiabilidad, y
               privacidad
             </p>

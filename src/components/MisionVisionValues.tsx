@@ -32,7 +32,7 @@ export default function MissionVisionValues() {
               <span className="text-amber-400">Somos Prestadores </span>
               <span className="text-green-500">Cualificados de Servicios de Confianza</span>
             </h2>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-justify">
               Con la entrada en vigencia de la nueva Ley Nº 6822/21 del año 2021, cambiando la denominación de Firma
               Digital, a Firma Electrónica Cualificada.
             </p>
@@ -49,7 +49,7 @@ export default function MissionVisionValues() {
               </div>
               <h3 className="text-2xl font-bold">Misión</h3>
             </div>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-justify">
               Brindar servicios de certificación digital de alta calidad, garantizando la seguridad y confiabilidad en
               las transacciones electrónicas.
             </p>
@@ -63,7 +63,7 @@ export default function MissionVisionValues() {
               </div>
               <h3 className="text-2xl font-bold">Visión</h3>
             </div>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-justify">
               Ser líderes en la transformación digital del Paraguay, facilitando procesos seguros y eficientes para
               empresas y personas.
             </p>
@@ -82,7 +82,7 @@ export default function MissionVisionValues() {
           <div className="space-y-4">
             <Card className="p-6 bg-gray-50">
               <h4 className="font-semibold mb-2">Compromiso:</h4>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-justify">
                 Nuestros colaboradores se capacitan constantemente en nuevas tecnologías, para poder ofrecer servicios
                 innovadores que hagan crecer a nuestros clientes.
               </p>
@@ -90,7 +90,7 @@ export default function MissionVisionValues() {
 
             <Card className="p-6 bg-gray-50">
               <h4 className="font-semibold mb-2">Integridad:</h4>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-justify">
                 Confiabilidad de los datos de nuestros clientes, ya que la seguridad es la base de nuestra
                 responsabilidad, dando garantía a las empresas que confían en nosotros.
               </p>
@@ -98,7 +98,7 @@ export default function MissionVisionValues() {
 
             <Card className="p-6 bg-gray-50">
               <h4 className="font-semibold mb-2">Perfección:</h4>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-justify">
                 La premisa es tener un contacto fluido con nuestros clientes para cubrir todas las necesidades
                 requeridas en la implementación.
               </p>

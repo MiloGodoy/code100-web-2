@@ -31,7 +31,7 @@ export default function EnvironmentalCommitment() {
                 <Leaf className="w-8 h-8 text-green-500" />
               </div>
             </div>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-lg text-justify">
               Promovemos la utilización de la Firma Electrónica Cualificada no sólo por la digitalización del Paraguay,
               sino también para incentivar una importante reducción en el uso de papel en las empresas.
             </p>
@@ -44,7 +44,7 @@ export default function EnvironmentalCommitment() {
                 <Globe className="w-8 h-8 text-green-500" />
               </div>
             </div>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-lg text-justify">
               La apuesta de Code100 a la despapelización en función de la sustentabilidad y cuidado del medio ambiente
               es más que una obligación, es una responsabilidad y una necesidad.
             </p>
@@ -57,7 +57,7 @@ export default function EnvironmentalCommitment() {
                 <Sprout className="w-8 h-8 text-green-500" />
               </div>
             </div>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-lg text-justify">
               Buscamos combinar la innovación y transformación cultural para una concienciación masiva de las
               consecuencias de la crisis climática que estamos viviendo.
             </p>

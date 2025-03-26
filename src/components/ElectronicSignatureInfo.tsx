@@ -14,7 +14,7 @@ export default function ElectronicSignatureInfo() {
             <br />
             100% segura y Legal
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+          <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed text-justify">
             Según la Ley 6822/21 y anteriormente la Ley 4017/10, la Firma Electrónica tiene plena equivalencia funcional
             y jurídica en paraguay. El receptor de un documento digital puede tener la seguridad de que la firma es
             original y no ha sido adulterada.
@@ -50,7 +50,7 @@ export default function ElectronicSignatureInfo() {
               <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-1">
                 <Check className="w-4 h-4 text-emerald-500" />
               </div>
-              <p className="text-gray-600 text-lg">
+              <p className="text-gray-600 text-lg text-justify">
                 Realizá la solicitud de forma virtual a través de nuestro formulario web y nos pondremos en contacto
                 contigo.
               </p>
@@ -60,7 +60,7 @@ export default function ElectronicSignatureInfo() {
               <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-1">
                 <Check className="w-4 h-4 text-emerald-500" />
               </div>
-              <p className="text-gray-600 text-lg">
+              <p className="text-gray-600 text-lg text-justify">
                 Una vez finalizado el procedimiento, agendaremos la emisión del certificado que deberá ser presencial.
               </p>
             </div>

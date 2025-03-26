@@ -20,7 +20,7 @@ export default function WhyChooseUs() {
               </div>
               <h3 className="text-2xl font-bold">In House</h3>
             </div>
-            <ul className="space-y-3 text-gray-600">
+            <ul className="space-y-3 text-gray-600 text-justify">
               <li>Software desarrollado por nuestro equipo</li>
               <li>Soporte de primera línea con nuestros propios desarrolladores</li>
               <li>Desarrollo a medida según requerimientos e integraciones con ERP</li>
@@ -40,7 +40,7 @@ export default function WhyChooseUs() {
               </div>
               <h3 className="text-2xl font-bold">Seguridad</h3>
             </div>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-justify">
               Certificación de Seguridad física e informática otorgada por el MIC (Ministerio de Industria y Comercio)
               que protege la infraestructura tecnológica de accesos no autorizados y garantizan la continuidad de tus
               operaciones.
@@ -55,7 +55,7 @@ export default function WhyChooseUs() {
               </div>
               <h3 className="text-2xl font-bold">Innovación</h3>
             </div>
-            <div className="space-y-4 text-gray-600">
+            <div className="space-y-4 text-gray-600 text-justify">
               <p>Actualización permanente de nuevas plataformas digitales y tecnológicas.</p>
               <p>
                 Desarrollamos Software y aplicaciones móviles para la gestión de documentos. Siempre a la vanguardia.
@@ -71,7 +71,7 @@ export default function WhyChooseUs() {
               </div>
               <h3 className="text-2xl font-bold">Compromiso social</h3>
             </div>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-justify">
               Siendo nuestra premisa la digitalización de documentos, ayudamos mediante la Fundación CODE100 a la
               eliminación paulatina del uso de papel tanto en el sector público como en el privado.
             </p>

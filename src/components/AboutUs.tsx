@@ -33,7 +33,7 @@ export default function AboutUs() {
               <span className="text-green-500">somos</span>
             </h1>
 
-            <div className="space-y-4 text-gray-600">
+            <div className="space-y-4 text-gray-600 text-justify">
               <p>
                 Desde el año 2015, nos hemos destacado como <span className="font-semibold text-gray-900">líderes</span>{" "}
                 en el mercado paraguayo como Prestadores de Servicios de Certificación de Firma Electrónica, siendo

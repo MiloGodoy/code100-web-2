@@ -10,7 +10,7 @@ export default function VisionMissionValues() {
             {/* Vision Card */}
             <div className="relative rounded-lg overflow-hidden group">
               <div className="absolute inset-0">
-                <Image src="/images/vision-bg.jpg" alt="Visión background" fill className="object-cover" />
+                <Image src="/images/vision-bg.jpg" alt="" fill className="object-cover" />
                 <div className="absolute inset-0 bg-black/60" />
               </div>
               <div className="relative p-6 text-white min-h-[400px] flex flex-col">
@@ -30,7 +30,7 @@ export default function VisionMissionValues() {
             {/* Mission Card */}
             <div className="relative rounded-lg overflow-hidden group">
               <div className="absolute inset-0">
-                <Image src="/images/mission-bg.jpg" alt="Misión background" fill className="object-cover" />
+                <Image src="/images/mission-bg.jpg" alt="" fill className="object-cover" />
                 <div className="absolute inset-0 bg-black/60" />
               </div>
               <div className="relative p-6 text-white min-h-[400px] flex flex-col">
@@ -50,7 +50,7 @@ export default function VisionMissionValues() {
             {/* Values Card */}
             <div className="relative rounded-lg overflow-hidden group">
               <div className="absolute inset-0">
-                <Image src="/images/values-bg.jpg" alt="Valores background" fill className="object-cover" />
+                <Image src="/images/values-bg.jpg" alt="" fill className="object-cover" />
                 <div className="absolute inset-0 bg-black/60" />
               </div>
               <div className="relative p-6 text-white min-h-[400px] flex flex-col">

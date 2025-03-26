@@ -45,14 +45,14 @@ export default function FAQSection() {
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
                 <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
-                <AccordionContent className="text-gray-600 whitespace-pre-line">{faq.answer}</AccordionContent>
+                <AccordionContent className="text-gray-600 whitespace-pre-line text-justify">{faq.answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
 
           {/* Newsletter Subscription */}
           <div className="bg-gray-50 p-8 rounded-lg">
-            <p className="text-gray-600 mb-6">Inscribite para recibir todas las novedades y noticias sobre Code100</p>
+            <p className="text-gray-600 mb-6 text-justify">Inscribite para recibir todas las novedades y noticias sobre Code100</p>
             <div className="flex flex-col md:flex-row gap-4">
               <Input type="text" placeholder="Nombre" className="flex-1" />
               <Input type="email" placeholder="Correo Electrónico" className="flex-1" />

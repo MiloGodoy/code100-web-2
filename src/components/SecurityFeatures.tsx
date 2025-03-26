@@ -27,7 +27,7 @@ export default function SecurityFeatures() {
                   <Shield className="w-8 h-8" />
                   <h3 className="text-2xl font-semibold">Validez Total</h3>
                 </div>
-                <p className="text-white/90 leading-relaxed max-w-xl">
+                <p className="text-white/90 leading-relaxed max-w-xl text-justify">
                   Cumple con los requisitos de seguridad establecidos por la ICPP (Infraestructura de Clave Pública del
                   Paraguay) y tiene plena validez jurídica, así como las firmas manuscritas.
                 </p>
@@ -39,7 +39,7 @@ export default function SecurityFeatures() {
                   <Cloud className="w-8 h-8" />
                   <h3 className="text-2xl font-semibold">Certificado Cualificado de Firma Electrónica en la Nube</h3>
                 </div>
-                <p className="text-white/90 leading-relaxed max-w-xl">
+                <p className="text-white/90 leading-relaxed max-w-xl text-justify">
                   Almacenado en un HSM (Módulo de Seguridad Hardware), es la opción más segura y confiable para la firma
                   digital de documentos y transacciones en formato electrónico.
                 </p>

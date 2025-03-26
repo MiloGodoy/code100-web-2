@@ -50,7 +50,7 @@ export default function ProductHero() {
             {/* Text Content */}
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl font-bold">Firmar documentos ahora es mucho más fácil</h1>
-              <p className="text-gray-600 text-lg">
+              <p className="text-gray-600 text-lg text-justify">
                 Con tu firma electrónica, tenes garantizada la autenticidad, integridad y validez jurídica de tus
                 documentos firmados, estés donde estés
               </p>
@@ -78,7 +78,7 @@ export default function ProductHero() {
       {/* Description Section */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <p className="text-gray-600 text-lg text-center max-w-4xl mx-auto">
+          <p className="text-gray-600 text-lg max-w-4xl mx-auto text-justify">
             El Certificado de Firma Electrónica Cualificada (antes conocida como Firma Digital) es un documento digital,
             emitido por CODE100 en Paraguay, con los datos necesarios para identificar a una persona. Se utiliza como
             una declaración electrónica que vincula los datos válidos de una firma con la persona física y confirma la
@@ -99,7 +99,7 @@ export default function ProductHero() {
                   Tipo {cert.type}
                 </div>
                 <h3 className="font-bold mb-4 lg:text-xl">{cert.title}</h3>
-                <p className="text-gray-600 mb-6">{cert.description}</p>
+                <p className="text-gray-600 mb-6 text-justify">{cert.description}</p>
                 {cert.hasButton && <Button className="bg-amber-400 hover:bg-amber-500 text-black" onClick={handleClick}>Conocer más</Button>}
               </Card>
             ))}

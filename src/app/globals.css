@@ -65,6 +65,13 @@
     --ring: 212.7 26.8% 83.9%;
   }
 }
+
+/* Add text-justify utility */
+@layer utilities {
+  .text-justify {
+    text-align: justify;
+  }
+}
  
 @layer base {
   * {

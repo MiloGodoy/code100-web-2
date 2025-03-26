@@ -94,7 +94,7 @@ export default function DownloadsSection() {
           {/* Header */}
           <div className="mb-12">
             <h2 className="text-3xl font-bold mb-6">Descargas útiles</h2>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-lg text-justify">
               Te presentamos las aplicaciones imprescindibles que aseguran el óptimo desempeño de la Firma Digital y los
               Certificados emitidos por CODE100. Estas herramientas garantizan una experiencia fluida y segura,
               facilitando la gestión de documentos y transacciones digitales con total confianza y eficacia.

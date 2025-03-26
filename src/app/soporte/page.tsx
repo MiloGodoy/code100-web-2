@@ -1,22 +1,22 @@
-import { AboutSection } from '@/components/AboutSection'
-import DownloadsSection from '@/components/DownloadSection'
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
-import ManualSection from '@/components/ManualSection'
+import { AboutSection } from "@/components/AboutSection"
+import DownloadsSection from "@/components/DownloadSection"
+import Footer from "@/components/Footer"
+import Header from "@/components/Header"
+import ManualSection from "@/components/ManualSection"
 
-
-
-
-const page = () => {
+const SoportePage = () => {
   return (
-    <div>
-        <Header />
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-grow">
         <ManualSection />
         <DownloadsSection />
         <AboutSection />
-        <Footer />
+      </main>
+      <Footer />
     </div>
   )
 }
 
-export default page
+export default SoportePage
+
