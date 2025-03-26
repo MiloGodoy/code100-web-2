@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import Newsletter from "@/components/NewsLetter"
 import Code100Logo from "../../public/code100_logo.png"
 import GrupoBepaLogo from "../../public/grupoBepa.png"
+import Link from "next/link"
 
 export default function AboutUs() {
   return (
@@ -61,10 +62,11 @@ export default function AboutUs() {
                 , contribuyendo así al avance continuo de la infraestructura digital en el país.
               </p>
             </div>
-
-            <Button className="bg-orange-500 hover:bg-orange-600">
-              CONOCÉ CODE100 <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href='/nosotros'>
+              <Button className="bg-orange-500 hover:bg-orange-600">
+                CONOCÉ CODE100 <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
 
