@@ -42,7 +42,7 @@ export default function DocumentationSection() {
               
               <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full">
                   <a 
-                    href="https://drive.google.com/file/d/1gRzLRQc_dGtHiPC4WgycjzGIG21SROA7/view?usp=sharing" 
+                    href="http://pca1.code100.com.py/crls/ca-code100-sa.crl" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center justify-center w-full" // Asegura que el enlace ocupe todo el botón

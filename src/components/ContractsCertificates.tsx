@@ -80,13 +80,15 @@ export default function ContractsCertificates() {
             <h2 className="text-3xl font-bold mb-12">Cadena de confianza y LCR</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {/* Root CA Certificate */}
-              <Card className="p-6">
-                <h3 className="font-medium mb-4">Certificado de la AC Raíz del Paraguay</h3>
-                <p className="text-gray-600 text-sm mb-6">
-                  Certificado en el cual comienza la cadena de confianza que compone la Infraestructura de Claves
-                  Públicas del Paraguay
-                </p>
-                <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full">
+              <Card className="p-6 flex flex-col">
+                <div className="flex-grow">
+                  <h3 className="font-medium mb-4">Certificado de la AC Raíz del Paraguay</h3>
+                  <p className="text-gray-600 text-sm mb-6">
+                    Certificado en el cual comienza la cadena de confianza que compone la Infraestructura de Claves
+                    Públicas del Paraguay
+                  </p>
+                </div>
+                <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full mt-auto">
                   <a 
                     href="https://drive.google.com/file/d/1PrImiZuhLa5v_tgi51u4WaFCl7ivFnLX/view?usp=drive_link" 
                     target="_blank" 
@@ -100,13 +102,15 @@ export default function ContractsCertificates() {
               </Card>
 
               {/* CODE100 AC Certificate (Until Jan 30) */}
-              <Card className="p-6">
-                <h3 className="font-medium mb-4">Certificado de la AC de CODE100</h3>
-                <p className="text-gray-500 text-sm mb-2">(Certificados emitidos hasta el 30 de enero 2023)</p>
-                <p className="text-gray-600 text-sm mb-6">
-                  Certificado firmado por la AC Raiz, habilitado para firmar los certificados para usuarios finales.
-                </p>
-                <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full">
+              <Card className="p-6 flex flex-col">
+                <div className="flex-grow">
+                  <h3 className="font-medium mb-4">Certificado de la AC de CODE100</h3>
+                  <p className="text-gray-500 text-sm mb-2">(Certificados emitidos hasta el 30 de enero 2023)</p>
+                  <p className="text-gray-600 text-sm mb-6">
+                    Certificado firmado por la AC Raiz, habilitado para firmar los certificados para usuarios finales.
+                  </p>
+                </div>
+                <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full mt-auto">
                   <a 
                     href="https://drive.google.com/file/d/1yfoD9-lyRatoM5vmZyWxj7hvj5bTV1sW/view?usp=drive_link" 
                     target="_blank" 
@@ -120,13 +124,15 @@ export default function ContractsCertificates() {
               </Card>
 
               {/* CODE100 AC Certificate (From Jan 30) */}
-              <Card className="p-6">
-                <h3 className="font-medium mb-4">Certificado de la AC de CODE100</h3>
-                <p className="text-gray-500 text-sm mb-2">(Certificados emitidos desde el 30 de enero 2023)</p>
-                <p className="text-gray-600 text-sm mb-6">
-                  Certificado firmado por la AC Raiz, habilitado para firmar los certificados para usuarios finales.
-                </p>
-                <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full">
+              <Card className="p-6 flex flex-col">
+                <div className="flex-grow">
+                  <h3 className="font-medium mb-4">Certificado de la AC de CODE100</h3>
+                  <p className="text-gray-500 text-sm mb-2">(Certificados emitidos desde el 30 de enero 2023)</p>
+                  <p className="text-gray-600 text-sm mb-6">
+                    Certificado firmado por la AC Raiz, habilitado para firmar los certificados para usuarios finales.
+                  </p>
+                </div>
+                <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full mt-auto">
                   <a 
                     href="https://drive.google.com/file/d/1gRzLRQc_dGtHiPC4WgycjzGIG21SROA7/view?usp=sharing" 
                     target="_blank" 

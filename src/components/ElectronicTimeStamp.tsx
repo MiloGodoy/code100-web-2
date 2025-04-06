@@ -14,8 +14,8 @@ export default function ElectronicTimestamp() {
             <p className="text-gray-600 mb-6">
               Leyes, decretos, reglamentos y resoluciones que rigen la actividad de la ICPP.
             </p>
-            <Button className="bg-amber-400 hover:bg-amber-500 text-black">
-              <Link href='/icp-paraguay'>
+            <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full asChild">
+              <Link href='/icp-paraguay' className="flex items-center justify-center">
                 Consultar
                 <ExternalLink className="ml-2 h-4 w-4" />
               </Link>
