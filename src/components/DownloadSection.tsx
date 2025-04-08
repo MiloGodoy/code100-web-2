@@ -8,6 +8,7 @@ import Anydesk from '../../public/anydesk.jpeg'
 import Bit4IdWin from '../../public/bit4id-windows-logo.png'
 import bit4IdLinux from '../../public/bit4idlinux.png'
 import Bit4Id from '../../public/bit4id.png'
+import ePass from '../../public/epassWin.jpeg'
 
 
 // Define the download items with their names and links
@@ -58,6 +59,18 @@ const downloads = [
     name: "bit4id MacOS",
     href: "#",
     icon: Bit4Id,
+    isImage: true,
+  },
+  {
+    name: "ePass2003 Windows",
+    href: "https://drive.google.com/file/d/1vL1tW1ucnEt321XA8MpGA1Po2PR5a2cU/view?usp=sharing",
+    icon: ePass,
+    isImage: true,
+  },
+  {
+    name: "ePass2003 Mac",
+    href: "https://drive.google.com/file/d/1Dbp1OpExxhFF4NIg71mLtqhhuyrqOvAs/view?usp=sharing",
+    icon: ePass,
     isImage: true,
   },
   // {
