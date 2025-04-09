@@ -90,7 +90,7 @@ export default function ContractsCertificates() {
                 </div>
                 <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full mt-auto">
                   <a 
-                    href="https://drive.google.com/file/d/1PrImiZuhLa5v_tgi51u4WaFCl7ivFnLX/view?usp=drive_link" 
+                    href="https://drive.google.com/file/d/1gRzLRQc_dGtHiPC4WgycjzGIG21SROA7/view?usp=sharing" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center justify-center w-full" // Asegura que el enlace ocupe todo el botón
@@ -112,7 +112,7 @@ export default function ContractsCertificates() {
                 </div>
                 <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full mt-auto">
                   <a 
-                    href="https://drive.google.com/file/d/1yfoD9-lyRatoM5vmZyWxj7hvj5bTV1sW/view?usp=drive_link" 
+                    href="https://drive.google.com/file/d/1PrImiZuhLa5v_tgi51u4WaFCl7ivFnLX/view?usp=drive_link" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center justify-center w-full" // Asegura que el enlace ocupe todo el botón
