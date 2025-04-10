@@ -19,16 +19,16 @@ export default function Footer() {
               className="w-auto h-20"
             />
             <div className="flex space-x-6">
-              <Link href="#" className="text-gray-400 hover:text-gray-600">
+              <Link href="https://www.facebook.com/share/18anzFKx9a/?mibextid=wwXIfr" className="text-gray-400 hover:text-gray-600">
                 <Facebook className="h-6 w-6" />
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-gray-600">
+              <Link href="https://www.instagram.com/code100.py?igsh=NThuZnRwZzhzajA5" className="text-gray-400 hover:text-gray-600">
                 <Instagram className="h-6 w-6" />
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-gray-600">
+              <Link href="https://youtube.com/@code100-firmadigital2?si=EXAVLPx3I5oy3pXX" className="text-gray-400 hover:text-gray-600">
                 <Youtube className="h-6 w-6" />
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-gray-600">
+              <Link href="https://www.linkedin.com/company/code100-s-a/" className="text-gray-400 hover:text-gray-600">
                 <Linkedin className="h-6 w-6" />
               </Link>
             </div>
@@ -40,22 +40,22 @@ export default function Footer() {
               <h3 className="font-semibold text-gray-900 mb-3">PRODUCTOS</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-gray-900">
+                  <Link href="/productos" className="text-gray-600 hover:text-gray-900">
                     Certificado de Firma Electrónica
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-gray-900">
+                  <Link href="/facturacion-electronica" className="text-gray-600 hover:text-gray-900">
                     Facturación Electrónica
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-gray-900">
+                  <Link href="talento100-page" className="text-gray-600 hover:text-gray-900">
                     Documentos Laborales
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-gray-900">
+                  <Link href="/codesign" className="text-gray-600 hover:text-gray-900">
                     Firma masiva de documentos
                   </Link>
                 </li>
@@ -65,12 +65,12 @@ export default function Footer() {
               <h3 className="font-semibold text-gray-900 mb-3">SOPORTE</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-gray-900">
+                  <Link href="/soporte" className="text-gray-600 hover:text-gray-900">
                     Manuales y Drivers
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-gray-900">
+                  <Link href="/repositorio-de-documentos-publicos" className="text-gray-600 hover:text-gray-900">
                     Repositorio de Documentos
                   </Link>
                 </li>
@@ -84,17 +84,12 @@ export default function Footer() {
               <h3 className="font-semibold text-gray-900 mb-3">EMPRESA</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-gray-900">
+                  <Link href="/nosotros" className="text-gray-600 hover:text-gray-900">
                     Sobre la empresa
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-gray-900">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-gray-600 hover:text-gray-900">
+                  <Link href="/nosotros" className="text-gray-600 hover:text-gray-900">
                     Políticas
                   </Link>
                 </li>
@@ -104,17 +99,17 @@ export default function Footer() {
               <h3 className="font-semibold text-gray-900 mb-3">AYUDA</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-gray-900">
+                  <Link href="/contacto" className="text-gray-600 hover:text-gray-900">
                     Consultas
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-gray-900">
+                  <Link href="/contacto" className="text-gray-600 hover:text-gray-900">
                     Solicitar Productos
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-600 hover:text-gray-900">
+                  <Link href="/contacto" className="text-gray-600 hover:text-gray-900">
                     Soporte Técnico
                   </Link>
                 </li>
@@ -139,6 +134,8 @@ export default function Footer() {
                 <div className="space-y-2">
                   <p>Brizuela Nº 750 c/ Eusebio Lillo - Villa Morra, Asunción</p>
                   <p>Benjamin Constant 973 – Edificio Arasa 2 Planta Baja, Oficina 12 - Asunción</p>
+                  <p>Sucursal CDE -
+                  Av. Adrian Jara y Pampliega, Edificio San Miguel 1er piso oficina N° 2</p>
                 </div>
               </div>
             </div>

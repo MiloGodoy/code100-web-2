@@ -1,6 +1,7 @@
 'use client'
 
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import NiñosJugando from '../../public/niños_jugando.jpeg'
 import NiñosPlantando from '../../public/niños_plantando.jpeg'
@@ -9,7 +10,7 @@ export default function FoundationImpact() {
   return (
     <section className="bg-emerald-600 py-16 md:py-24 relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute inset-0 pattern-grid-lg" />
       </div>
 
@@ -36,17 +37,26 @@ export default function FoundationImpact() {
           {/* Building Smiles */}
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <Image src={NiñosPlantando} alt="Niños plantando árboles" fill className="object-cover" />
+              <Image
+                src={NiñosPlantando}
+                alt="Niños plantando árboles"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="bg-amber-400 p-8 md:p-12 rounded-lg">
               <h2 className="text-2xl md:text-3xl font-bold mb-6 text-black">Construyendo Sonrisas</h2>
               <p className="text-black mb-8">
-                ¡Haz la diferencia en la vida de un niño hoy! Dona para brindar esperanza, educación y oportunidades.
-                Cada contribución cuenta y ayuda a construir un futuro más brillante para nuestros pequeños. ¡Únete a
-                nosotros en el viaje de hacer sonreír a los corazones más jóvenes!
+                ¡Haz la diferencia en la vida de un niño hoy! Dona para brindar esperanza, educación y oportunidades. Cada
+                contribución cuenta y ayuda a construir un futuro más brillante para nuestros pequeños. ¡Únete a nosotros
+                en el viaje de hacer sonreír a los corazones más jóvenes!
               </p>
-              <Button className="bg-emerald-700 hover:bg-emerald-800 text-white" size="lg">
-                Ayuda a Construir Sonrisas
+              
+              {/* Botón corregido */}
+              <Button asChild className="bg-emerald-700 hover:bg-emerald-800 text-white" size="lg">
+                <Link href="/contacto">
+                  Ayuda a Construir Sonrisas
+                </Link>
               </Button>
             </div>
           </div>
@@ -61,4 +71,3 @@ export default function FoundationImpact() {
     </section>
   )
 }
-

@@ -32,7 +32,7 @@ export default function ImpactCounter() {
   return (
     <section className="bg-emerald-600 py-16 md:py-24 relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute inset-0 pattern-grid-lg" />
       </div>
 

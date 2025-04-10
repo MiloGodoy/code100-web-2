@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { Card } from "@/components/ui/card"
-import RustDeskLogo from "../../public/rustdesk-logo.jpeg"
-import JavaLogo from '../../public/java-logo.jpeg'
+import RustDeskLogo from "../../public/rustdesk-logo.png"
+import JavaLogo from '../../public/java-logo.png'
 import Winrar from '../../public/winrar-logo.jpeg'
 import Adobe from '../../public/adobe-logo.jpeg'
 import Anydesk from '../../public/anydesk.jpeg'
@@ -45,19 +45,25 @@ const downloads = [
   },
   {
     name: "bit4id Windows",
-    href: "#",
+    href: "https://cdn.bit4id.com/es/middleware.htm",
     icon: Bit4IdWin,
     isImage: true,
   },
   {
     name: "bit4id Linux",
-    href: "#",
+    href: "https://cdn.bit4id.com/es/middleware.htm",
     icon: bit4IdLinux,
     isImage: true,
   },
   {
     name: "bit4id MacOS",
-    href: "#",
+    href: "https://cdn.bit4id.com/es/middleware.htm",
+    icon: Bit4Id,
+    isImage: true,
+  },
+  {
+    name: "bit4id Aduanas",
+    href: "https://drive.google.com/file/d/1EZY3af9Lkd5gYh0CMUg_3X0ahTQj7UhE/view?usp=sharing",
     icon: Bit4Id,
     isImage: true,
   },
@@ -70,6 +76,12 @@ const downloads = [
   {
     name: "ePass2003 Mac",
     href: "https://drive.google.com/file/d/1Dbp1OpExxhFF4NIg71mLtqhhuyrqOvAs/view?usp=sharing",
+    icon: ePass,
+    isImage: true,
+  },
+  {
+    name: "ePass2003 Admin",
+    href: "https://drive.google.com/file/d/1dxrgijQYvplBP1s-66CmXELvFaBmAcL8/view?usp=sharing",
     icon: ePass,
     isImage: true,
   },

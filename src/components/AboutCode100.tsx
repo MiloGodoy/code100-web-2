@@ -47,7 +47,7 @@ export default function AboutCode100() {
               <Card className="p-6">
                 <h4 className="font-medium mb-4">Autoridades de Registro Delegadas</h4>
                 <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
-                  <span>PARADATA</span>
+                  <span>PARADATA (en proceso de rescisión)</span>
                   <Button className="bg-amber-400 hover:bg-amber-500 text-black" asChild>
                     <a
                       href="https://code100.com.py/wp-content/uploads/2021/08/contrato-paradata.pdf"
@@ -105,7 +105,7 @@ export default function AboutCode100() {
               </p>
               <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full" asChild>
                 <a
-                  href="https://code100.com.py/wp-content/uploads/2023/10/Res_CODE100_N_187-15_Habilitacion_de_PSC.pdf"
+                  href="https://www.acraiz.gov.py/adjunt/Resoluciones/Res_CODE100_N_187-15_Habilitacion_de_PSC.PDF"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -121,6 +121,16 @@ export default function AboutCode100() {
               <p className="text-gray-600">
                 Manuales y descargas para la configuración de la PC del suscriptor de un Certificado Digital.
               </p>
+              <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full" asChild>
+                <a
+                  href="/soporte"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Descargar
+                  <Download className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
             </Card>
 
             {/* Electronic Signature Service */}

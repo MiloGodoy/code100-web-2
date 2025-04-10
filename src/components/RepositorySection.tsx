@@ -51,7 +51,7 @@ export const RepositorySection = () => {
                       Aquí puedes suspender permanentemente la validez de tu certificado electrónico.
                     </p>
                     <Link
-                      href="/revocar"
+                      href="http://par.code100.com.py/revoke"
                       className="inline-flex items-center px-4 py-2 bg-yellow-400 rounded-full text-sm font-semibold hover:bg-yellow-500 transition-colors"
                     >
                       REVOCAR

@@ -22,31 +22,31 @@ const products = [
     title: "Certificado Cualificado de Firma Electrónica",
     description: "Firma Electrónica tipo F1, F2 y F3",
     icon: FileCheck,
-    href: "/productos/firma-electronica",
+    href: "/productos",
   },
   {
     title: "FUTURA100",
     description: "Facturación Electrónica",
     icon: FileSpreadsheet,
-    href: "/productos/futura100",
+    href: "/facturacion-electronica",
   },
   {
     title: "TALENTO100",
     description: "Documentos Electrónicos Laborales con Comunicación al MTESS",
     icon: FileText,
-    href: "/productos/talento100",
+    href: "/talento100-page",
   },
   {
     title: "DataFlow",
     description: "Gestor de firmas electrónicas de documentos",
     icon: Files,
-    href: "/productos/dataflow",
+    href: "https://dataflow.com.py/",
   },
   {
     title: "CodeSign",
     description: "Firma masiva de documentos",
     icon: FilePen,
-    href: "/productos/codesign",
+    href: "/codesign",
   },
 ]
 
@@ -87,7 +87,7 @@ export default function Header() {
                 <Link href="/productos" className="text-foreground/60 transition-colors hover:text-foreground" onClick={() => setIsOpen(false)} > Productos </Link>
                 {/* <Link href="/certificados" className="text-foreground/60 transition-colors hover:text-foreground" onClick={() => setIsOpen(false)} > Certificados </Link>  */}
                 <Link href="/soporte" className="text-foreground/60 transition-colors hover:text-foreground" onClick={() => setIsOpen(false)} > Soporte </Link>
-                <Link href="/repositorio-documentos" className="text-foreground/60 transition-colors hover:text-foreground" onClick={() => setIsOpen(false)} > Repositorio </Link> 
+                <Link href="/repositorio-de-documentos-publicos" className="text-foreground/60 transition-colors hover:text-foreground" onClick={() => setIsOpen(false)} > Repositorio </Link> 
                 {/* <Link href="/blog" className="text-foreground/60 transition-colors hover:text-foreground" onClick={() => setIsOpen(false)} > Blog </Link>  */}
                 <Link href="/contacto" className="text-foreground/60 transition-colors hover:text-foreground" onClick={() => setIsOpen(false)} > Contacto </Link> 
                 <Link href="/fundacion" className="text-primary/90 font-semibold transition-colors hover:text-primary" onClick={() => setIsOpen(false)} > Fundación Code100 </Link>
@@ -120,7 +120,7 @@ export default function Header() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-foreground/60 transition-colors hover:text-foreground">
+              <NavigationMenuTrigger className="text-foreground/60 transition-colors hover:text-foreground bg-transparent data-[state=open]:bg-transparent">
                 Productos
               </NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -128,7 +128,7 @@ export default function Header() {
                   {products.map((product) => (
                     <li key={product.title}>
                       <NavigationMenuLink asChild>
-                        <Link href='/productos' className="flex items-start space-x-4 p-3 rounded-lg hover:bg-accent">
+                        <Link href={product.href} className="flex items-start space-x-4 p-3 rounded-lg hover:bg-accent">
                           <div className="bg-gradient-to-br from-amber-400 to-emerald-400 p-2 rounded-lg">
                             <product.icon className="h-5 w-5 text-white" />
                           </div>
@@ -165,7 +165,7 @@ export default function Header() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link
-                href="/repositorio-documentos"
+                href="/repositorio-de-documentos-publicos"
                 className="text-foreground/60 transition-colors hover:text-foreground flex items-center gap-0.5"
               >
                 Repositorio
