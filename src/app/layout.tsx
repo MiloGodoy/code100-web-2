@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Code100 - Confianza y Seguridad Digital",
   description: "Prestadores Cualificados de Servicios de Confianza en Paraguay desde 2015",
-  metadataBase: new URL("https://code100-web.vercel.app"),
+  metadataBase: new URL("https://code100.com.py/"),
   openGraph: {
     title: "Code100 - Confianza y Seguridad Digital",
     description: "Prestadores Cualificados de Servicios de Confianza en Paraguay desde 2015",
-    url: "https://code100-web.vercel.app",
+    url: "https://code100.com.py/",
     siteName: "Code100",
     images: [
       {
@@ -50,7 +50,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es" translate="no" className="notranslate">
+      <head>
+        <meta name="google" content="notranslate" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
