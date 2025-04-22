@@ -29,8 +29,7 @@ export default function MissionVisionValues() {
           </div>
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="text-amber-400">Somos Prestadores </span>
-              <span className="text-green-500">Cualificados de Servicios de Confianza</span>
+              <span className="text-amber-400">Somos Prestadores Cualificados de Servicios de Confianza </span>
             </h2>
             <p className="text-gray-600 text-justify">
               Con la entrada en vigencia de la nueva Ley Nº 6822/21 del año 2021, cambiando la denominación de Firma

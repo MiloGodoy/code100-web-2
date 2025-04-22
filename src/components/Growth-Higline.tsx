@@ -76,7 +76,7 @@ export default function GrowthTimeline() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="mb-12 md:mb-20">
-          <div className="bg-gradient-to-r from-emerald-400 via-green-400 to-amber-400 transform -rotate-1">
+          <div className="bg-[#4ECDC4] transform -rotate-1">
             <h2 className="text-3xl md:text-5xl font-bold text-center py-4 px-8">Crecemos constantemente</h2>
           </div>
         </div>

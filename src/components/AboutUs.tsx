@@ -29,8 +29,7 @@ export default function AboutUs() {
           {/* Text Content Column */}
           <div className="space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold">
-              <span className="text-amber-400">Quienes </span>
-              <span className="text-green-500">somos</span>
+              <span className="text-amber-400">Quienes somos </span>
             </h1>
 
             <div className="space-y-4 text-gray-600 text-justify">

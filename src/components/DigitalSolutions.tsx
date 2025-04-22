@@ -13,7 +13,7 @@ export default function DigitalSolutions() {
       </div>
 
       {/* Gradient Section */}
-      <div className="bg-gradient-to-r from-emerald-400 via-green-400 to-amber-400">
+      <div className="bg-[#4ECDC4]">
         <div className="container mx-auto px-4 py-20">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
