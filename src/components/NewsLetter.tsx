@@ -90,7 +90,7 @@ export default function Newsletter({
                 required
               />
             </div>
-            <Button type="submit" className="bg-orange-500 hover:bg-orange-600 whitespace-nowrap" disabled={isLoading}>
+            <Button type="submit" className="bg-amber-400 hover:bg-amber-500 text-black" disabled={isLoading}>
               {isLoading ? "Enviando..." : buttonText}
             </Button>
           </form>

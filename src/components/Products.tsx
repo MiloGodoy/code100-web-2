@@ -30,7 +30,7 @@ export default function Products() {
             </p>
             <div className="pt-4">
               <Link href="/productos">
-                <Button className="bg-orange-500 hover:bg-orange-600">
+                <Button className="bg-amber-400 hover:bg-amber-500 text-black">
                   QUIERO SABER MÁS <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -60,7 +60,7 @@ export default function Products() {
             </div>
             <div className="mt-4">
               <Link href="/talento100-page">
-                <Button className="bg-orange-500 hover:bg-orange-600">
+                <Button className="bg-amber-400 hover:bg-amber-500 text-black">
                   QUIERO SABER MÁS <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -87,7 +87,7 @@ export default function Products() {
             </div>
             <div className="mt-4">
               <Link href="/facturacion-electronica">
-                <Button className="bg-orange-500 hover:bg-orange-600">
+                <Button className="bg-amber-400 hover:bg-amber-500 text-black">
                   QUIERO SABER MÁS <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -115,7 +115,7 @@ export default function Products() {
             </div>
             <div className="mt-4">
               <Link href="https://dataflow.com.py/">
-                <Button className="bg-orange-500 hover:bg-orange-600">
+                <Button className="bg-amber-400 hover:bg-amber-500 text-black">
                   QUIERO SABER MÁS <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -143,7 +143,7 @@ export default function Products() {
             </div>
             <div className="mt-4">
               <Link href="/codesign">
-                <Button className="bg-orange-500 hover:bg-orange-600">
+                <Button className="bg-amber-400 hover:bg-amber-500 text-black ">
                   QUIERO SABER MÁS <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>

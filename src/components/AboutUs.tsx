@@ -62,7 +62,7 @@ export default function AboutUs() {
               </p>
             </div>
             <Link href='/nosotros'>
-              <Button className="bg-orange-500 hover:bg-orange-600">
+              <Button className="bg-amber-400 text-white hover:bg-amber-500 transition-colors">
                 CONOCÉ CODE100 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>

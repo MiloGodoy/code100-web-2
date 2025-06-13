@@ -99,7 +99,7 @@ export default function Hero() {
                       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">{slide.title}</h2>
                       <p className="text-sm md:text-base lg:text-lg text-gray-200 text-justify">{slide.description}</p>
                       <div className="flex gap-4 pt-4">
-                        <Button asChild size="lg" className="bg-orange-500 hover:bg-orange-600">
+                        <Button asChild size="lg" className="bg-amber-400 hover:bg-amber-500 text-black">
                           <Link href={slide.primaryButton.href}>{slide.primaryButton.text}</Link>
                         </Button>
                         {slide.secondaryButton && (
