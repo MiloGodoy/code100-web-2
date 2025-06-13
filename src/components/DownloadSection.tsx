@@ -75,7 +75,7 @@ const downloads = [
   },
   {
     name: "ePass2003 Mac",
-    href: "https://drive.google.com/file/d/1Dbp1OpExxhFF4NIg71mLtqhhuyrqOvAs/view?usp=sharing",
+    href: "https://docs.ftsafe.cn/s/3tWkzJRbXBLxTRo",
     icon: ePass,
     isImage: true,
   },
