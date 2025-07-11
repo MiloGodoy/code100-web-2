@@ -1,12 +1,48 @@
-import { Download } from "lucide-react"
+"use client"
+
+import { useState } from "react"
+import { Download, Lock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import ReCAPTCHA from "react-google-recaptcha"
 
 export default function ContractsCertificates() {
+  const [captchaVerified, setCaptchaVerified] = useState(false)
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null)
+
+  const handleCaptchaChange = (token: string | null) => {
+    setCaptchaToken(token)
+    setCaptchaVerified(!!token)
+  }
+
+  const handleDownload = (url: string) => {
+    if (captchaVerified) {
+      window.open(url, "_blank", "noopener,noreferrer")
+    }
+  }
+
   return (
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
+          {/* Captcha Section - Moved to top */}
+          <div className="mb-12 p-6 bg-blue-50 rounded-lg border-2 border-blue-200">
+            <h3 className="text-lg font-semibold mb-4 text-blue-900">Verificación requerida para descargas</h3>
+            <p className="text-blue-700 mb-4">
+              Por favor, complete la verificación para habilitar las descargas de documentos.
+            </p>
+            <div className="flex justify-center">
+              <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""} onChange={handleCaptchaChange} />
+            </div>
+            {captchaVerified && (
+              <div className="mt-4 p-3 bg-green-100 border border-green-300 rounded-md">
+                <p className="text-green-700 text-center font-medium">
+                  ✓ Verificación completada. Ahora puede descargar los documentos.
+                </p>
+              </div>
+            )}
+          </div>
+
           {/* Trust Services Contracts Section */}
           <div className="mb-20">
             <h2 className="text-3xl font-bold mb-4">Contratos de prestación de servicios de confianza</h2>
@@ -19,43 +55,82 @@ export default function ContractsCertificates() {
             <div className="grid md:grid-cols-3 gap-6 mb-12">
               <Card className="p-6">
                 <h3 className="font-medium mb-6">Certificado Cualificado Tributario Tipo F1</h3>
-                <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full" asChild>
-                  <a
-                    href="https://drive.google.com/file/d/1Ntj8RsTWa7aWgYt5MXqDHnMYRx0_RYdr/view"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Descargar
-                    <Download className="ml-2 h-4 w-4" />
-                  </a>
+                <Button
+                  className={`w-full ${
+                    captchaVerified
+                      ? "bg-amber-400 hover:bg-amber-500 text-black"
+                      : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                  }`}
+                  disabled={!captchaVerified}
+                  onClick={() =>
+                    handleDownload("https://drive.google.com/file/d/1Ntj8RsTWa7aWgYt5MXqDHnMYRx0_RYdr/view")
+                  }
+                >
+                  {captchaVerified ? (
+                    <>
+                      Descargar
+                      <Download className="ml-2 h-4 w-4" />
+                    </>
+                  ) : (
+                    <>
+                      Verificar captcha
+                      <Lock className="ml-2 h-4 w-4" />
+                    </>
+                  )}
                 </Button>
               </Card>
 
               <Card className="p-6">
                 <h3 className="font-medium mb-6">Certificado Cualificado Tipo F2</h3>
-                <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full" asChild>
-                  <a
-                    href="https://drive.google.com/file/d/1gUR8azJwyFWi7maboRxPFn-rRQ9xAHtE/view"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Descargar
-                    <Download className="ml-2 h-4 w-4" />
-                  </a>
+                <Button
+                  className={`w-full ${
+                    captchaVerified
+                      ? "bg-amber-400 hover:bg-amber-500 text-black"
+                      : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                  }`}
+                  disabled={!captchaVerified}
+                  onClick={() =>
+                    handleDownload("https://drive.google.com/file/d/1gUR8azJwyFWi7maboRxPFn-rRQ9xAHtE/view")
+                  }
+                >
+                  {captchaVerified ? (
+                    <>
+                      Descargar
+                      <Download className="ml-2 h-4 w-4" />
+                    </>
+                  ) : (
+                    <>
+                      Verificar captcha
+                      <Lock className="ml-2 h-4 w-4" />
+                    </>
+                  )}
                 </Button>
               </Card>
 
               <Card className="p-6">
                 <h3 className="font-medium mb-6">Certificado Cualificado Tipo F3</h3>
-                <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full" asChild>
-                  <a
-                    href="https://drive.google.com/file/d/1xMtC_A4oUS_r8KzuRljJ6K47HCdEdXKz/view"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Descargar
-                    <Download className="ml-2 h-4 w-4" />
-                  </a>
+                <Button
+                  className={`w-full ${
+                    captchaVerified
+                      ? "bg-amber-400 hover:bg-amber-500 text-black"
+                      : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                  }`}
+                  disabled={!captchaVerified}
+                  onClick={() =>
+                    handleDownload("https://drive.google.com/file/d/1xMtC_A4oUS_r8KzuRljJ6K47HCdEdXKz/view")
+                  }
+                >
+                  {captchaVerified ? (
+                    <>
+                      Descargar
+                      <Download className="ml-2 h-4 w-4" />
+                    </>
+                  ) : (
+                    <>
+                      Verificar captcha
+                      <Lock className="ml-2 h-4 w-4" />
+                    </>
+                  )}
                 </Button>
               </Card>
             </div>
@@ -76,7 +151,7 @@ export default function ContractsCertificates() {
           </div>
 
           {/* Trust Chain Section */}
-          <div>
+          <div className="pt-20">
             <h2 className="text-3xl font-bold mb-12">Cadena de confianza y LCR</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {/* Root CA Certificate */}
@@ -88,16 +163,28 @@ export default function ContractsCertificates() {
                     Públicas del Paraguay
                   </p>
                 </div>
-                <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full mt-auto">
-                  <a 
-                    href="https://drive.google.com/file/d/1gRzLRQc_dGtHiPC4WgycjzGIG21SROA7/view?usp=sharing" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-full" // Asegura que el enlace ocupe todo el botón
-                  >
-                    Descargar
-                    <Download className="ml-2 h-4 w-4" />
-                  </a>
+                <Button
+                  className={`w-full mt-auto ${
+                    captchaVerified
+                      ? "bg-amber-400 hover:bg-amber-500 text-black"
+                      : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                  }`}
+                  disabled={!captchaVerified}
+                  onClick={() =>
+                    handleDownload("https://drive.google.com/file/d/1gRzLRQc_dGtHiPC4WgycjzGIG21SROA7/view?usp=sharing")
+                  }
+                >
+                  {captchaVerified ? (
+                    <>
+                      Descargar
+                      <Download className="ml-2 h-4 w-4" />
+                    </>
+                  ) : (
+                    <>
+                      Verificar captcha
+                      <Lock className="ml-2 h-4 w-4" />
+                    </>
+                  )}
                 </Button>
               </Card>
 
@@ -110,16 +197,30 @@ export default function ContractsCertificates() {
                     Certificado firmado por la AC Raiz, habilitado para firmar los certificados para usuarios finales.
                   </p>
                 </div>
-                <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full mt-auto">
-                  <a 
-                    href="https://drive.google.com/file/d/1PrImiZuhLa5v_tgi51u4WaFCl7ivFnLX/view?usp=drive_link" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-full" // Asegura que el enlace ocupe todo el botón
-                  >
-                    Descargar
-                    <Download className="ml-2 h-4 w-4" />
-                  </a>
+                <Button
+                  className={`w-full mt-auto ${
+                    captchaVerified
+                      ? "bg-amber-400 hover:bg-amber-500 text-black"
+                      : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                  }`}
+                  disabled={!captchaVerified}
+                  onClick={() =>
+                    handleDownload(
+                      "https://drive.google.com/file/d/1PrImiZuhLa5v_tgi51u4WaFCl7ivFnLX/view?usp=drive_link",
+                    )
+                  }
+                >
+                  {captchaVerified ? (
+                    <>
+                      Descargar
+                      <Download className="ml-2 h-4 w-4" />
+                    </>
+                  ) : (
+                    <>
+                      Verificar captcha
+                      <Lock className="ml-2 h-4 w-4" />
+                    </>
+                  )}
                 </Button>
               </Card>
 
@@ -132,16 +233,28 @@ export default function ContractsCertificates() {
                     Certificado firmado por la AC Raiz, habilitado para firmar los certificados para usuarios finales.
                   </p>
                 </div>
-                <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full mt-auto">
-                  <a 
-                    href="https://drive.google.com/file/d/1yfoD9-lyRatoM5vmZyWxj7hvj5bTV1sW/view" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-full" // Asegura que el enlace ocupe todo el botón
-                  >
-                    Descargar
-                    <Download className="ml-2 h-4 w-4" />
-                  </a>
+                <Button
+                  className={`w-full mt-auto ${
+                    captchaVerified
+                      ? "bg-amber-400 hover:bg-amber-500 text-black"
+                      : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                  }`}
+                  disabled={!captchaVerified}
+                  onClick={() =>
+                    handleDownload("https://drive.google.com/file/d/1yfoD9-lyRatoM5vmZyWxj7hvj5bTV1sW/view")
+                  }
+                >
+                  {captchaVerified ? (
+                    <>
+                      Descargar
+                      <Download className="ml-2 h-4 w-4" />
+                    </>
+                  ) : (
+                    <>
+                      Verificar captcha
+                      <Lock className="ml-2 h-4 w-4" />
+                    </>
+                  )}
                 </Button>
               </Card>
             </div>
@@ -151,4 +264,3 @@ export default function ContractsCertificates() {
     </section>
   )
 }
-
