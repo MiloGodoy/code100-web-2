@@ -1,5 +1,6 @@
 import { FileText, Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 const tutorials = [
   {
@@ -66,6 +67,11 @@ export default function ManualSection() {
                 </Button>
               </div>
             ))}
+            <h2 className="font-bold pt-10 text-2xl">Prestador Cualificado de Sello cualificado de tiempo electrónico</h2>
+            <Link 
+              href="https://drive.google.com/file/d/19jMtjaOo7HOKvX-xndAqDhX8gOnx7cEU/view?usp=drive_link"
+              >SERVICIO - SELLO CUALIFICADO DE TIEMPO ELECTRONICO SCTE CODE100 S.A. (descarga)
+            </Link>
           </div>
         </div>
       </div>

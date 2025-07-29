@@ -8,10 +8,9 @@ import ReCAPTCHA from "react-google-recaptcha"
 
 export default function AboutCode100() {
   const [captchaVerified, setCaptchaVerified] = useState(false)
-  const [captchaToken, setCaptchaToken] = useState<string | null>(null)
 
   const handleCaptchaChange = (token: string | null) => {
-    setCaptchaToken(token)
+
     setCaptchaVerified(!!token)
   }
 
