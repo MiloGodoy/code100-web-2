@@ -1,9 +1,16 @@
+'use client'
 import { Download, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import Link from "next/link"
 
 export default function ElectronicTimestamp() {
+
+
+  const handleClick = () => {
+    window.open("https://drive.google.com/file/d/19jMtjaOo7HOKvX-xndAqDhX8gOnx7cEU/view")
+  } 
+
   return (
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -34,7 +41,7 @@ export default function ElectronicTimestamp() {
                   Certificado que demuestra que los datos de una firma con sello de tiempo, existieron en un momento
                   específico y que no han sido alterados desde entonces.
                 </p>
-                <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full">
+                <Button className="bg-amber-400 hover:bg-amber-500 text-black w-full" onClick={handleClick}>
                   Descargar
                   <Download className="ml-2 h-4 w-4" />
                 </Button>
