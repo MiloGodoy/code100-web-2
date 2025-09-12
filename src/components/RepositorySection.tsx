@@ -1,5 +1,6 @@
 import { Search, FileCheck, XCircle } from "lucide-react"
 import Link from "next/link"
+import { Card } from "./ui/card"
 
 export const RepositorySection = () => {
   return (
@@ -82,6 +83,19 @@ export const RepositorySection = () => {
                 </div>
               </div>
             </div>
+            <Card className="p-4 bg-yellow-50 text-black border-0">
+              <p className="text-md mb-2">
+                <strong>Resolución Nº 1054</strong> Por la cual se concede la Certificación de Dispositivo Cualificado al PCSC Code100 S.A.
+              </p>
+              <Link
+                href="https://drive.google.com/file/d/1L96mDYb0MZuWvm-XEEYRjguFUPh0djVd/view"
+                className="text-sm underline font-semibold"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver documento
+              </Link>
+            </Card>
           </div>
         </div>
       </div>
