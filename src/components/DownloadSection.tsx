@@ -9,6 +9,7 @@ import Bit4IdWin from '../../public/bit4id-windows-logo.png'
 import bit4IdLinux from '../../public/bit4idlinux.png'
 import Bit4Id from '../../public/bit4id.png'
 import ePass from '../../public/epassWin.jpeg'
+import Link from "next/link"
 
 
 // Define the download items with their names and links
@@ -167,6 +168,12 @@ export default function DownloadsSection() {
             ))}
           </div>
         </div>
+      </div>
+      <div className="container mx-auto px-50 py-20 text-center">
+        <h2>Descarga: mToken CryptoID</h2>
+        <Link href="https://cloud.code100.com.py/index.php/s/2NWkeoywkdATyPF" className="text-blue-500 underline">
+          https://cloud.code100.com.py/index.php/s/2NWkeoywkdATyPF
+        </Link>
       </div>
     </section>
   )
