@@ -86,6 +86,18 @@ const downloads = [
     icon: ePass,
     isImage: true,
   },
+  {
+    name: "mToken CryptoID - Windows",
+    href: "https://cloud.code100.com.py/index.php/s/2NWkeoywkdATyPF?path=%2Fwindows",
+    icon: ePass,
+    isImage: true,
+  },
+  {
+    name: "mToken CryptoID - MacOS",
+    href: "https://cloud.code100.com.py/index.php/s/2NWkeoywkdATyPF?path=%2Fmac",
+    icon: ePass,
+    isImage: true,
+  },
   // {
   //   name: "bit4id Aduana Windows",
   //   href: "#",
@@ -168,12 +180,6 @@ export default function DownloadsSection() {
             ))}
           </div>
         </div>
-      </div>
-      <div className="container mx-auto px-50 py-20 text-center">
-        <h2>Descarga: mToken CryptoID</h2>
-        <Link href="https://cloud.code100.com.py/index.php/s/2NWkeoywkdATyPF" className="text-blue-500 underline">
-          https://cloud.code100.com.py/index.php/s/2NWkeoywkdATyPF
-        </Link>
       </div>
     </section>
   )
