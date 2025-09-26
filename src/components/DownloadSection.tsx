@@ -9,7 +9,6 @@ import Bit4IdWin from '../../public/bit4id-windows-logo.png'
 import bit4IdLinux from '../../public/bit4idlinux.png'
 import Bit4Id from '../../public/bit4id.png'
 import ePass from '../../public/epassWin.jpeg'
-import Link from "next/link"
 
 
 // Define the download items with their names and links
