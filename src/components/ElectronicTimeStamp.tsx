@@ -8,7 +8,7 @@ export default function ElectronicTimestamp() {
 
 
   const handleClick = () => {
-    window.open("https://drive.google.com/file/d/19jMtjaOo7HOKvX-xndAqDhX8gOnx7cEU/view")
+    window.open("https://drive.google.com/file/d/1Y4WmULANi8cc_a3LraEzeo-T_EYp2GsV/view?usp=drive_link")
   } 
 
   return (
