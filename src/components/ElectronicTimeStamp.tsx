@@ -31,12 +31,12 @@ export default function ElectronicTimestamp() {
 
           {/* Electronic Time Stamp */}
           <div>
-            <h2 className="text-3xl font-bold mb-8">Sello Cualificado de tiempo Electrónico</h2>
+            <h2 className="text-3xl font-bold mb-8">Sello Cualificado de Tiempo Electrónico</h2>
 
             <div className="grid md:grid-cols-2 gap-6">
-              {/* SSTE Certificate */}
+              {/* SCTE Certificate */}
               <Card className="p-6">
-                <h3 className="font-medium mb-4">Certificado del SSTE</h3>
+                <h3 className="font-medium mb-4">Certificado del SCTE</h3>
                 <p className="text-gray-600 mb-6">
                   Certificado que demuestra que los datos de una firma con sello de tiempo, existieron en un momento
                   específico y que no han sido alterados desde entonces.
