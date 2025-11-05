@@ -4,7 +4,7 @@ import SecurityImage from '../../public/sign_security.png'
 
 export default function SecurityFeatures() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden pt-50 pb-20">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-amber-400 via-lime-400 to-emerald-400" />
 

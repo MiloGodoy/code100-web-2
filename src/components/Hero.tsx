@@ -25,7 +25,7 @@ const slides = [
     },
     secondaryButton: {
       text: "MÁS INFO",
-      href: "/facturacion-electronica",
+      href: "/talento100-page",
     },
   },
   {
@@ -47,11 +47,11 @@ const slides = [
       "Solución integral que optimiza las operaciones de facturación de tu empresa. Simplifica la generación, envío y almacenamiento de facturas electrónicas, garantizando cumplimiento legal, agilidad administrativa y mayor control financiero.",
     primaryButton: {
       text: "SOLICITE AHORA",
-      href: "/solicitar",
+      href: "/solicitar-productos",
     },
     secondaryButton: {
       text: "MÁS INFO",
-      href: "/info-facturacion",
+      href: "/facturacion-electronica",
     },
   },
 ]
