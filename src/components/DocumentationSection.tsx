@@ -59,7 +59,7 @@ export default function DocumentationSection() {
                     : "bg-gray-300 text-gray-500 cursor-not-allowed"
                 }`}
                 disabled={!captchaVerified}
-                onClick={() => handleDownload("http://ca1.code100.com.py/firma-digital/crl/CA-CODE100.crl")}
+                onClick={() => handleDownload("api/download")}
               >
                 {captchaVerified ? (
                   <>
