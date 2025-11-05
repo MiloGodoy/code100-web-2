@@ -14,6 +14,8 @@ export async function GET() {
       },
     })
   } catch (err) {
+    console.error("Error al descargar el archivo:", err)
     return NextResponse.json({ error: "No se pudo descargar el archivo" }, { status: 500 })
   }
+  
 }
