@@ -1,7 +1,35 @@
 'use client'
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, FormEvent } from "react";
 import { useRouter } from "next/navigation";
+
+interface CertificateType {
+  id: string;
+}
+
+interface HolderType {
+  id: string;
+}
+
+interface Payload {
+  issueType: string;
+  holderType: HolderType;
+  certificateType: CertificateType;
+  registrationAuthority: { id: string };
+  contact: {
+    phone: string;
+    emailAddress: string;
+    alternativePhone: string;
+    alternativeEmailAddress: string | null;
+  };
+  parameters: {
+    holderIdentification: string;
+    holderIdentificationType: string;
+  };
+  startValidation: boolean;
+  validity: { years: number; months: number; days: number };
+}
+
 
 export default function CertificadoForm() {
   const router = useRouter();
@@ -52,7 +80,7 @@ export default function CertificadoForm() {
     }
   };
 
-  const enviarAlEndpoint = async (payload: any) => {
+  const enviarAlEndpoint = async (payload: Payload): Promise<void> => {
     setLoading(true);
     setMessage("");
     setSuccess(null);
@@ -78,16 +106,20 @@ export default function CertificadoForm() {
       setMessage("✅ Solicitud realizada correctamente. En breve le llegará un correo con el enlace para realizar su videoverificación solicitada.");
       setSuccess(true);
       return data;
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Error al enviar:", error);
-      setMessage(`❌ Error: ${error.message}`);
+      if (error instanceof Error) {
+        setMessage(`❌ Error: ${error.message}`);
+      } else {
+        setMessage("❌ Error desconocido");
+      }
       setSuccess(false);
     } finally {
       setLoading(false);
     }
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
 
     let certificateType = { id: "" };
