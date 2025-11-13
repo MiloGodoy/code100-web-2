@@ -51,6 +51,9 @@ export default function CertificadoForm() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState<boolean | null>(null);
+  const [validityOptions, setValidityOptions] = useState<number[]>([1]);
+  const [emailError, setEmailError] = useState("");
+  const [identificacionError, setIdentificacionError] = useState("");
 
   const countryCodes = [
     { flag: "🇵🇾", code: "+595" },
@@ -127,6 +130,10 @@ export default function CertificadoForm() {
 
     switch (formData.tipoCertificado) {
       case "Tributario F1":
+        certificateType = { id: "274f50c3-13f2-4a17-23b1-08db6790487c" };
+        holderType = { id: "e4d8c4d8-b388-485c-be42-e1d71a3bdc8d" };
+        break;
+      case "Tributario F1 (SHA-512)":
         certificateType = { id: "a842bcde-3d11-40d2-a03a-26de9a8bd29c" };
         holderType = { id: "e4d8c4d8-b388-485c-be42-e1d71a3bdc8d" };
         break;
@@ -170,10 +177,17 @@ export default function CertificadoForm() {
     const selectedCertificateType = e.target.value;
     const holderType = getHolderType(selectedCertificateType);
 
+    if (selectedCertificateType === "Firma F3") {
+      setValidityOptions([1, 2, 3, 4]);
+    } else {
+      setValidityOptions([1]); // Solo 1 año para F1
+    }
+
     setFormData({
       ...formData,
       tipoCertificado: selectedCertificateType,
       tipoTitular: holderType.code,
+      validez: "1"
     });
   };
 
@@ -188,8 +202,17 @@ export default function CertificadoForm() {
 
       {/* Tipo de Certificado */}
       <div>
-        <label className="block text-gray-700 font-medium mb-1">
+        <label className="flex items-center text-gray-700 font-medium mb-1">
           Tipo de Certificado
+          <div className="relative group ml-2">
+            <span className="text-blue-600 font-bold cursor-pointer text-lg">ℹ️</span>
+            <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded-md px-3 py-2 w-72 shadow-lg z-10">
+              Los certificados de tipo <strong>Tributario</strong> son de uso
+              <strong> exclusivo </strong> en documentos tributarios para el sistema
+              de SIFEN. Asimismo, <strong>no</strong> se permite el uso de certificados
+              no tributarios para este propósito.
+            </div>
+          </div>
         </label>
         <select
           className="w-full border rounded-lg p-2"
@@ -199,6 +222,7 @@ export default function CertificadoForm() {
         >
           <option value="">Selecciona una opción</option>
           <option value="Tributario F1">Tributario F1</option>
+          <option value="Tributario F1 (SHA-512)">Tributario F1 (SHA-512)</option>
           <option value="Firma F3">Firma F3</option>
         </select>
       </div>
@@ -216,36 +240,32 @@ export default function CertificadoForm() {
         />
       </div>
 
-      {/* Tipo de Emisión */}
-      <div>
-        <label className="block text-gray-700 font-medium mb-1">
-          Tipo de Emisión
-        </label>
-        <input
-          type="text"
-          value={formData.tipoEmision}
-          className="w-full border rounded-lg p-2 bg-gray-100"
-          readOnly
-        />
-      </div>
-
       {/* Validez */}
       <div>
-        <label className="block text-gray-700 font-medium mb-1">Validez</label>
+        <label className="flex items-center text-gray-700 font-medium mb-1">
+          Validez
+          <div className="relative group ml-2">
+            <span className="text-blue-600 font-bold cursor-pointer text-lg">ℹ️</span>
+            <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded-md px-3 py-2 w-80 shadow-lg z-10">
+              Los periodos de validez permitidos están reglamentados por el
+              <strong> Ministerio de Industria y Comercio</strong>.
+            </div>
+          </div>
+        </label>
+
         <select
           className="w-full border rounded-lg p-2"
           value={formData.validez}
-          onChange={(e) =>
-            setFormData({ ...formData, validez: e.target.value })
-          }
+          onChange={(e) => setFormData({ ...formData, validez: e.target.value })}
         >
-          {[1, 2, 3, 4].map((y) => (
+          {validityOptions.map((y) => (
             <option key={y} value={y}>
               {y} año{y > 1 ? "s" : ""}
             </option>
           ))}
         </select>
       </div>
+
 
       {/* Tipo de Identificación */}
       <div>
@@ -267,36 +287,62 @@ export default function CertificadoForm() {
       </div>
 
       {/* Número de Identificación */}
+      {/* Número de Identificación */}
       <div>
         <label className="block text-gray-700 font-medium mb-1">
           Número de Identificación
         </label>
+
         <input
           type="text"
-          className="w-full border rounded-lg p-2"
+          className={`w-full border rounded-lg p-2 ${identificacionError ? "border-red-500" : ""
+            }`}
+          placeholder="Ingrese su identificación"
           value={formData.numeroIdentificacion}
-          onChange={(e) =>
-            setFormData({ ...formData, numeroIdentificacion: e.target.value })
-          }
+          maxLength={10}  // limite máximo
+          onChange={(e) => {
+            const soloNumeros = e.target.value.replace(/\D/g, ""); // solo dígitos
+
+            setFormData({ ...formData, numeroIdentificacion: soloNumeros });
+
+            if (soloNumeros.length === 0) {
+              setIdentificacionError("Debe ingresar una identificación.");
+            } else if (soloNumeros.length > 10) {
+              setIdentificacionError("La identificación no puede superar 10 dígitos.");
+            } else {
+              setIdentificacionError("");
+            }
+          }}
           required
         />
+
+        {identificacionError && (
+          <p className="text-red-600 text-sm mt-1">{identificacionError}</p>
+        )}
       </div>
+
 
       {/* Teléfono */}
       <div>
-        <label className="block text-gray-700 font-medium mb-1">Teléfono</label>
+        <label className="block text-gray-700 font-medium mb-1">
+          Teléfono celular
+        </label>
+
         <div className="flex items-center border rounded-lg p-2">
+
+          {/* SELECT DEL CÓDIGO PAÍS */}
           {!isCustomCode ? (
             <select
               className="text-lg mr-2 bg-transparent"
               value={formData.telefonoCodigo}
               onChange={(e) => {
-                if (e.target.value === "Otro") {
+                const value = e.target.value;
+                if (value === "Otro") {
                   setIsCustomCode(true);
                   setCustomCode("");
-                } else {
-                  setFormData({ ...formData, telefonoCodigo: e.target.value });
+                  return;
                 }
+                setFormData({ ...formData, telefonoCodigo: value });
               }}
             >
               {countryCodes.map((c) => (
@@ -311,47 +357,82 @@ export default function CertificadoForm() {
               placeholder="+XXX"
               className="w-20 mr-2 border rounded-lg p-1 text-center"
               value={customCode}
-              onChange={(e) => setCustomCode(e.target.value)}
+              onChange={(e) => {
+                const val = e.target.value.replace(/[^\d+]/g, "");
+                setCustomCode(val);
+              }}
             />
           )}
+
+          {/* INPUT DEL NÚMERO */}
           <input
             type="tel"
-            placeholder="123456789"
+            placeholder="Ej: 981234567"
             className="w-full focus:outline-none"
             value={formData.telefono}
-            onChange={(e) =>
-              setFormData({ ...formData, telefono: e.target.value })
+            maxLength={
+              formData.telefonoCodigo === "+595"
+                ? 9    // Paraguay sin 0
+                : formData.telefonoCodigo === "+54"
+                  ? 10
+                  : formData.telefonoCodigo === "+55"
+                    ? 11
+                    : 15
             }
+            onChange={(e) => {
+              // SOLO NÚMEROS
+              const soloNumeros = e.target.value.replace(/\D/g, "");
+              setFormData({ ...formData, telefono: soloNumeros });
+            }}
+            required
           />
         </div>
       </div>
 
+
+      {/* Correo */}
       {/* Correo */}
       <div>
         <label className="block text-gray-700 font-medium mb-1">
           Correo Electrónico
         </label>
+
         <input
           type="email"
-          className="w-full border rounded-lg p-2"
+          className={`w-full border rounded-lg p-2 ${emailError ? "border-red-500" : ""
+            }`}
           placeholder="tucorreo@ejemplo.com"
           value={formData.correo}
-          onChange={(e) =>
-            setFormData({ ...formData, correo: e.target.value })
-          }
+          maxLength={50} // 🔥 límite de caracteres
+          onChange={(e) => {
+            const value = e.target.value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            setFormData({ ...formData, correo: value });
+
+            if (!emailRegex.test(value)) {
+              setEmailError("Ingrese un correo válido (ej: usuario@dominio.com)");
+            } else {
+              setEmailError("");
+            }
+          }}
           required
         />
+
+        {emailError && (
+          <p className="text-grey-100 text-sm mt-2">{emailError}</p>
+        )}
       </div>
+
 
       {/* Botón */}
       <button
         type="submit"
         disabled={loading}
-        className={`w-full py-2 rounded-lg font-semibold text-white transition ${
-          loading
-            ? "bg-gray-400 cursor-not-allowed"
-            : "bg-indigo-600 hover:bg-indigo-700"
-        }`}
+        className={`w-full py-2 rounded-lg font-semibold text-white transition ${loading
+          ? "bg-gray-400 cursor-not-allowed"
+          : "bg-indigo-600 hover:bg-indigo-700"
+          }`}
       >
         {loading ? "Enviando..." : "Enviar"}
       </button>
@@ -359,11 +440,10 @@ export default function CertificadoForm() {
       {/* Mensaje */}
       {message && (
         <div
-          className={`mt-4 p-3 rounded-lg text-center font-medium ${
-            success
-              ? "bg-green-100 text-green-800 border border-green-400"
-              : "bg-red-100 text-red-800 border border-red-400"
-          }`}
+          className={`mt-4 p-3 rounded-lg text-center font-medium ${success
+            ? "bg-green-100 text-green-800 border border-green-400"
+            : "bg-red-100 text-red-800 border border-red-400"
+            }`}
         >
           {message}
         </div>
