@@ -90,7 +90,8 @@ export default function Header() {
                 <Link href="/repositorio-de-documentos-publicos" className="text-foreground/60 transition-colors hover:text-foreground" onClick={() => setIsOpen(false)} > Repositorio </Link> 
                 {/* <Link href="/blog" className="text-foreground/60 transition-colors hover:text-foreground" onClick={() => setIsOpen(false)} > Blog </Link>  */}
                 <Link href="/contacto" className="text-foreground/60 transition-colors hover:text-foreground" onClick={() => setIsOpen(false)} > Contacto </Link> 
-                <Link href="/fundacion" className="text-primary/90 font-semibold transition-colors hover:text-primary" onClick={() => setIsOpen(false)} > Fundación Code100 </Link>
+                <Link href="/fundacion" className="text-foreground/60 transition-colors hover:text-foreground" onClick={() => setIsOpen(false)} > Fundación Code100 </Link>
+                <Link href="/solicitudes" className="text-foreground/60 transition-colors hover:text-foreground" onClick={() => setIsOpen(false)} > Solicitudes </Link>
               </nav>
             </SheetContent>
           </Sheet>
@@ -196,6 +197,15 @@ export default function Header() {
                 className="text-foreground/60 transition-colors hover:text-foreground flex items-center gap-0.5"
               >
                 Fundación Code100
+                
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link
+                href="/solicitudes"
+                className="text-foreground/60 transition-colors hover:text-foreground flex items-center gap-0.5"
+              >
+                Solicitudes
                 
               </Link>
             </NavigationMenuItem>
